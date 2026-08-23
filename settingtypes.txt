@@ -1,0 +1,27 @@
+# ========================================================================
+# jc_places settingtypes.txt
+# ========================================================================
+
+# Spawn position
+static_spawnpoint (Spawn Position) string 0,0,0
+
+# Apartment position
+apartment_pos (Apartment Position) string 0,0,0
+
+# Public mine position
+mine_pos (Public Mine Position) string 0,0,0
+
+# Shopping mall position
+mall_pos (Shopping Mall Position) string 0,0,0
+
+# Stadium position
+stadium_pos (Stadium Position) string 0,0,0
+
+# City position
+city_pos (City Position) string 0,0,0
+
+# Horse track position
+horses_pos (Horse Track Position) string 0,0,0
+
+# Archery range position
+archery_pos (Archery Range Position) string 0,0,0

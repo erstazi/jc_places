@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jc_places\n"
+"Language: nl\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Teleport to @1"
+msgstr "Teleporteer naar @1"
+
+msgid "Player not found"
+msgstr "Speler niet gevonden"
+
+msgid "Nice try! You can't escape!"
+msgstr "Goede poging! Je kunt niet ontsnappen!"
+
+msgid "@1 position updated!"
+msgstr "Positie van @1 bijgewerkt!"
+
+msgid "No permission to set position!"
+msgstr "Geen toestemming om de positie in te stellen!"
+
+msgid "Teleported to @1..."
+msgstr "Geteleporteerd naar @1..."
+
+msgid "Position for @1 is not set!"
+msgstr "Positie voor @1 is niet ingesteld!"
+
+msgid "List all available teleport locations"
+msgstr "Alle beschikbare teleportlocaties weergeven"
+
+msgid "Available Teleports"
+msgstr "Beschikbare teleportlocaties"
+
+msgid "Teleport"
+msgstr "Teleporteer"
+
+msgid "Close"
+msgstr "Sluiten"
+
+msgid "Spawn"
+msgstr "Spawn"
+
+msgid "Apartment"
+msgstr "Appartement"
+
+msgid "City"
+msgstr "Stad"
+
+msgid "Stadium"
+msgstr "Stadion"
+
+msgid "Horse Track"
+msgstr "Paardenrenbaan"
+
+msgid "Archery Range"
+msgstr "Boogschietbaan"
+
+msgid "Public Mine"
+msgstr "Openbare Mijn"
+
+msgid "Shopping Mall"
+msgstr "Winkelcentrum"

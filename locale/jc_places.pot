@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jc_places\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Teleport to @1"
+msgstr ""
+
+msgid "Player not found"
+msgstr ""
+
+msgid "Nice try! You can't escape!"
+msgstr ""
+
+msgid "@1 position updated!"
+msgstr ""
+
+msgid "No permission to set position!"
+msgstr ""
+
+msgid "Teleported to @1..."
+msgstr ""
+
+msgid "Position for @1 is not set!"
+msgstr ""
+
+msgid "List all available teleport locations"
+msgstr ""
+
+msgid "Available Teleports"
+msgstr ""
+
+msgid "Teleport"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Spawn"
+msgstr ""
+
+msgid "Apartment"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Stadium"
+msgstr ""
+
+msgid "Horse Track"
+msgstr ""
+
+msgid "Archery Range"
+msgstr ""
+
+msgid "Public Mine"
+msgstr ""
+
+msgid "Shopping Mall"
+msgstr ""

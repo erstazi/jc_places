@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jc_places\n"
+"Language: uk\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Teleport to @1"
+msgstr "Телепортуватися до @1"
+
+msgid "Player not found"
+msgstr "Гравця не знайдено"
+
+msgid "Nice try! You can't escape!"
+msgstr "Непогана спроба! Ти не можеш втекти!"
+
+msgid "@1 position updated!"
+msgstr "Позицію @1 оновлено!"
+
+msgid "No permission to set position!"
+msgstr "Немає дозволу встановлювати позицію!"
+
+msgid "Teleported to @1..."
+msgstr "Телепортовано до @1..."
+
+msgid "Position for @1 is not set!"
+msgstr "Позицію для @1 не встановлено!"
+
+msgid "List all available teleport locations"
+msgstr "Показати всі доступні місця телепортації"
+
+msgid "Available Teleports"
+msgstr "Доступні телепортації"
+
+msgid "Teleport"
+msgstr "Телепортуватися"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Spawn"
+msgstr "Спавн"
+
+msgid "Apartment"
+msgstr "Квартира"
+
+msgid "City"
+msgstr "Місто"
+
+msgid "Stadium"
+msgstr "Стадіон"
+
+msgid "Horse Track"
+msgstr "Іподром"
+
+msgid "Archery Range"
+msgstr "Майданчик для стрільби з лука"
+
+msgid "Public Mine"
+msgstr "Громадська Шахта"
+
+msgid "Shopping Mall"
+msgstr "Торговий центр"

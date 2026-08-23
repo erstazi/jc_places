@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jc_places\n"
+"Language: ru\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Teleport to @1"
+msgstr "Телепортироваться в @1"
+
+msgid "Player not found"
+msgstr "Игрок не найден"
+
+msgid "Nice try! You can't escape!"
+msgstr "Хорошая попытка! Тебе не сбежать!"
+
+msgid "@1 position updated!"
+msgstr "Позиция @1 обновлена!"
+
+msgid "No permission to set position!"
+msgstr "Нет прав для установки позиции!"
+
+msgid "Teleported to @1..."
+msgstr "Телепортировано в @1..."
+
+msgid "Position for @1 is not set!"
+msgstr "Позиция для @1 не установлена!"
+
+msgid "List all available teleport locations"
+msgstr "Показать все доступные места для телепортации"
+
+msgid "Available Teleports"
+msgstr "Доступные телепортации"
+
+msgid "Teleport"
+msgstr "Телепортироваться"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Spawn"
+msgstr "Спавн"
+
+msgid "Apartment"
+msgstr "Квартира"
+
+msgid "City"
+msgstr "Город"
+
+msgid "Stadium"
+msgstr "Стадион"
+
+msgid "Horse Track"
+msgstr "Ипподром"
+
+msgid "Archery Range"
+msgstr "Стрельбище из лука"
+
+msgid "Public Mine"
+msgstr "Общественная Шахта"
+
+msgid "Shopping Mall"
+msgstr "Торговый центр"

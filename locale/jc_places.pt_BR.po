@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jc_places\n"
+"Language: pt_BR\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Teleport to @1"
+msgstr "Teletransportar para @1"
+
+msgid "Player not found"
+msgstr "Jogador não encontrado"
+
+msgid "Nice try! You can't escape!"
+msgstr "Boa tentativa! Você não pode escapar!"
+
+msgid "@1 position updated!"
+msgstr "Posição de @1 atualizada!"
+
+msgid "No permission to set position!"
+msgstr "Você não tem permissão para definir a posição!"
+
+msgid "Teleported to @1..."
+msgstr "Teletransportado para @1..."
+
+msgid "Position for @1 is not set!"
+msgstr "A posição de @1 não está definida!"
+
+msgid "List all available teleport locations"
+msgstr "Listar todos os locais de teletransporte disponíveis"
+
+msgid "Available Teleports"
+msgstr "Teletransportes disponíveis"
+
+msgid "Teleport"
+msgstr "Teletransportar"
+
+msgid "Close"
+msgstr "Fechar"
+
+msgid "Spawn"
+msgstr "Spawn"
+
+msgid "Apartment"
+msgstr "Apartamento"
+
+msgid "City"
+msgstr "Cidade"
+
+msgid "Stadium"
+msgstr "Estádio"
+
+msgid "Horse Track"
+msgstr "Hipódromo"
+
+msgid "Archery Range"
+msgstr "Campo de tiro com arco"
+
+msgid "Public Mine"
+msgstr "Mina Pública"
+
+msgid "Shopping Mall"
+msgstr "Centro Comercial"
