@@ -60,3 +60,6 @@ msgstr ""
 
 msgid "Shopping Mall"
 msgstr ""
+
+msgid "Public Farm"
+msgstr ""

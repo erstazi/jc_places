@@ -61,3 +61,6 @@ msgstr "Publiczna Kopalnia"
 
 msgid "Shopping Mall"
 msgstr "Centrum handlowe"
+
+msgid "Public Farm"
+msgstr "Publiczna Farma"

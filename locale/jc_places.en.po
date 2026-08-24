@@ -61,3 +61,6 @@ msgstr "Public Mine"
 
 msgid "Shopping Mall"
 msgstr "Shopping Mall"
+
+msgid "Public Farm"
+msgstr "Public Farm"

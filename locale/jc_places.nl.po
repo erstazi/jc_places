@@ -61,3 +61,6 @@ msgstr "Openbare Mijn"
 
 msgid "Shopping Mall"
 msgstr "Winkelcentrum"
+
+msgid "Public Farm"
+msgstr "Openbare Boerderij"

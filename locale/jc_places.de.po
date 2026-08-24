@@ -61,3 +61,6 @@ msgstr "Öffentliche Mine"
 
 msgid "Shopping Mall"
 msgstr "Einkaufszentrum"
+
+msgid "Public Farm"
+msgstr "Öffentlicher Bauernhof"

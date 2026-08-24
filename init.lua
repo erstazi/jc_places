@@ -14,6 +14,7 @@ local jc_places = {
     { name = "mine", setting = "mine_pos", label = S("Public Mine"), },
     { name = "mall", setting = "mall_pos", label = S("Shopping Mall"), },
     { name = "stadium", setting = "stadium_pos", label = S("Stadium"), },
+    { name = "farm", setting = "farm_pos", label = S("Public Farm"), },
     { name = "city", setting = "city_pos", label = S("City"), },
     { name = "horses", setting = "horses_pos", label = S("Horse Track"), },
     { name = "archery", setting = "archery_pos", label = S("Archery Range"), },

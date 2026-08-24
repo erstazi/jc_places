@@ -61,3 +61,6 @@ msgstr "Mina Pública"
 
 msgid "Shopping Mall"
 msgstr "Centro Comercial"
+
+msgid "Public Farm"
+msgstr "Quinta Pública"

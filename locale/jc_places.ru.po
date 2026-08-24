@@ -61,3 +61,6 @@ msgstr "Общественная Шахта"
 
 msgid "Shopping Mall"
 msgstr "Торговый центр"
+
+msgid "Public Farm"
+msgstr "Общественная ферма"
