@@ -1,13 +1,15 @@
--- ========================================================================
--- jc_places for teleport commands with /set + /get support + xban jail check
--- ========================================================================
+-- ============================================================================
+-- jc_places for teleport commands with /set + /get support + xban2 jail check
+-- ============================================================================
 
 local mod_storage = core.get_mod_storage()
 local S = core.get_translator(core.get_current_modname())
+local xban_available = core.get_modpath("xban2") ~= nil
+local prison_pos = core.settings:get_pos("prison_pos") or { x = -300, y = 7, z = -48 }
 
 local jc_places = {
   pos_not_set = false,
-  execution_pos = {x = -310, y = 0, z = -40},
+  prison_pos = prison_pos,
   places = {
     { name = "spawn", setting = "static_spawnpoint", label = S("Spawn"), },
     { name = "apt", setting = "apartment_pos", label = S("Apartment"), },
@@ -61,9 +63,8 @@ local function jc_places_register_place(place)
       -- ==========================================
       -- XBAN JAIL CHECK
       -- ==========================================
-      local xban_available = core.get_modpath("xban") ~= nil
       if xban_available and xban and xban.get_property(player_name, "jailed") then
-        player:setpos(jc_places.execution_pos)
+        player:set_pos(jc_places.prison_pos)
         return true, S("Nice try! You can't escape!")
       end
 
@@ -98,7 +99,7 @@ local function jc_places_register_place(place)
         local target_pos = get_pos(place)
         if target_pos and target_pos.x ~= 0 then
           local safe_pos = { x = target_pos.x, y = target_pos.y + 1, z = target_pos.z }
-          player:setpos(safe_pos)
+          player:set_pos(safe_pos)
           return true, S("Teleported to @1...", place.label)
         else
           return true, core.colorize("#FF7C7C", "-!- " .. S("Position for @1 is not set!", place.label) )
@@ -193,41 +194,20 @@ core.register_on_player_receive_fields(function(player, formname, fields)
       }
 
       -- ==========================================
-      -- XBAN JAIL CHECK
+      -- xban JAIL CHECK
       -- ==========================================
-      local xban_available = core.get_modpath("xban") ~= nil
-
       if xban_available and xban and xban.get_property(player_name, "jailed") then
-        player:setpos(jc_places.execution_pos)
+        player:set_pos(jc_places.prison_pos)
         core.close_formspec(player_name, "jc_places:places")
-        core.chat_send_player(
-          player_name,
-          S("Nice try! You can't escape!")
-        )
+        core.chat_send_player(player_name, S("Nice try! You can't escape!") )
         return true
       end
-
-      player:setpos(safe_pos)
-
+      player:set_pos(safe_pos)
       core.close_formspec(player_name, "jc_places:places")
-
-      core.chat_send_player(
-        player_name,
-        S("Teleported to @1...", selected_place.label)
-      )
-
+      core.chat_send_player(player_name, S("Teleported to @1...", selected_place.label) )
       return true
-
     else
-      core.chat_send_player(
-        player_name,
-        core.colorize(
-          "#FF7C7C",
-          "-!- " ..
-          S("Position for @1 is not set!", selected_place.label)
-        )
-      )
-
+      core.chat_send_player(player_name, core.colorize("#FF7C7C", "-!- " .. S("Position for @1 is not set!", selected_place.label) ) )
       return true
     end
   end
