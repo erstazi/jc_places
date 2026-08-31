@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jc_places\n"
+"Language: zh_CN\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Teleport to @1"
+msgstr "传送到 @1"
+
+msgid "Player not found"
+msgstr "未找到玩家"
+
+msgid "Nice try! You can't escape!"
+msgstr "想得美！你逃不掉！"
+
+msgid "@1 position updated!"
+msgstr "@1 的位置已更新！"
+
+msgid "No permission to set position!"
+msgstr "没有设置位置的权限！"
+
+msgid "Teleported to @1..."
+msgstr "已传送到 @1……"
+
+msgid "Position for @1 is not set!"
+msgstr "@1 的位置尚未设置！"
+
+msgid "List all available teleport locations"
+msgstr "列出所有可用的传送地点"
+
+msgid "Available Teleports"
+msgstr "可用传送地点"
+
+msgid "Teleport"
+msgstr "传送"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Spawn"
+msgstr "出生点"
+
+msgid "Apartment"
+msgstr "公寓"
+
+msgid "City"
+msgstr "城市"
+
+msgid "Stadium"
+msgstr "体育场"
+
+msgid "Horse Track"
+msgstr "赛马场"
+
+msgid "Archery Range"
+msgstr "射箭场"
+
+msgid "Public Mine"
+msgstr "公共矿场"
+
+msgid "Shopping Mall"
+msgstr "购物中心"
+
+msgid "Public Farm"
+msgstr "公共农场"
+
+msgid "Prison Visitation"
+msgstr "监狱探视"
