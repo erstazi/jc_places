@@ -7,7 +7,7 @@ local S = core.get_translator(core.get_current_modname())
 local xban_available = core.get_modpath("xban2") ~= nil
 local prison_pos = core.settings:get_pos("prison_pos") or { x = -300, y = 7, z = -48 }
 
-local jc_places = {
+jc_places = {
   pos_not_set = false,
   prison_pos = prison_pos,
   places = {
@@ -118,6 +118,44 @@ for _, place in ipairs(jc_places.places) do
 end
 
 
+function jc_places.show_places(name)
+  local player = core.get_player_by_name(name)
+
+  if not player then
+    return false, S("Player not found")
+  end
+
+  local row_height = 0.9
+  local scroll_height = 6.2
+  -- local scroll_max = math.max(0, (#jc_places.places * row_height) - scroll_height)
+  local scroll_max = math.max(0, math.ceil((#jc_places.places * row_height) - scroll_height))
+
+  local formspec =
+      "formspec_version[4]"
+    .. "size[11,9]"
+    .. default.gui_bg
+    .. default.gui_bg_img
+    .. "label[0.5,0.4;" .. core.formspec_escape(S("Available Teleports")) .. "]"
+    .. "box[0.4,1.0;9.9,6.6;#111111]"
+    .. "scroll_container[0.6,1.2;9.5,6.2;jc_places_scroll;vertical;1]"
+
+  for i, place in ipairs(jc_places.places) do
+    local y = 0.2 + ((i - 1) * row_height)
+    formspec = formspec
+      .. "label[0.2," .. y .. ";5.8,0.8;" .. core.colorize("yellow", "/" .. place.name) .. " - " .. core.formspec_escape(place.label) .. "]"
+      .. "button[6.7," .. (y - 0.08) .. ";3.0,0.6;teleport_" .. place.name .. ";" .. core.formspec_escape(S("Teleport")) .. "]"
+  end
+
+  formspec = formspec
+    .. "scroll_container_end[]"
+    .. "scrollbaroptions[min=0;max=" .. scroll_max .. ";smallstep=1;largestep=3]"
+    .. "scrollbar[10.3,1.05;0.4,6.6;vertical;jc_places_scroll;0]"
+    .. "button_exit[3.5,7.9;3,0.8;close;" .. core.formspec_escape(S("Close")) .. "]"
+
+  core.show_formspec(name, "jc_places:places", formspec)
+  return true
+end
+
 -- ========================
 -- /places formspec
 -- ========================
@@ -125,41 +163,7 @@ core.register_chatcommand("places", {
   params = "",
   description = S("List all available teleport locations"),
   func = function(name, param)
-    local player = core.get_player_by_name(name)
-
-    if not player then
-      return false, S("Player not found")
-    end
-
-    local row_height = 0.9
-    local scroll_height = 6.2
-    -- local scroll_max = math.max(0, (#jc_places.places * row_height) - scroll_height)
-    local scroll_max = math.max(0, math.ceil((#jc_places.places * row_height) - scroll_height))
-
-    local formspec =
-        "formspec_version[4]"
-      .. "size[11,9]"
-      .. default.gui_bg
-      .. default.gui_bg_img
-      .. "label[0.5,0.4;" .. core.formspec_escape(S("Available Teleports")) .. "]"
-      .. "box[0.4,1.0;9.9,6.6;#111111]"
-      .. "scroll_container[0.6,1.2;9.5,6.2;jc_places_scroll;vertical;1]"
-
-    for i, place in ipairs(jc_places.places) do
-      local y = 0.2 + ((i - 1) * row_height)
-      formspec = formspec
-        .. "label[0.2," .. y .. ";5.8,0.8;" .. core.colorize("yellow", "/" .. place.name) .. " - " .. core.formspec_escape(place.label) .. "]"
-        .. "button[6.7," .. (y - 0.08) .. ";3.0,0.6;teleport_" .. place.name .. ";" .. core.formspec_escape(S("Teleport")) .. "]"
-    end
-
-    formspec = formspec
-      .. "scroll_container_end[]"
-      .. "scrollbaroptions[min=0;max=" .. scroll_max .. ";smallstep=1;largestep=3]"
-      .. "scrollbar[10.3,1.05;0.4,6.6;vertical;jc_places_scroll;0]"
-      .. "button_exit[3.5,7.9;3,0.8;close;" .. core.formspec_escape(S("Close")) .. "]"
-
-    core.show_formspec(name, "jc_places:places", formspec)
-    return true
+    return jc_places.show_places(name)
   end,
 })
 
