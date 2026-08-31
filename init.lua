@@ -5,7 +5,7 @@
 local mod_storage = core.get_mod_storage()
 local S = core.get_translator(core.get_current_modname())
 local xban_available = core.get_modpath("xban2") ~= nil
-local prison_pos = core.settings:get_pos("prison_pos") or { x = -300, y = 7, z = -48 }
+local prison_pos = core.settings:get_pos("prison_pos") or { x = -53, y = -7, z = 59 }
 
 jc_places = {
   pos_not_set = false,
@@ -20,6 +20,7 @@ jc_places = {
     { name = "city", setting = "city_pos", label = S("City"), },
     { name = "horses", setting = "horses_pos", label = S("Horse Track"), },
     { name = "archery", setting = "archery_pos", label = S("Archery Range"), },
+    { name = "prison", setting = "prison_visitor_pos", label = S("Prison Visitation"), },
   },
 }
 

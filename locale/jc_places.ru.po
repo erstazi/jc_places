@@ -64,3 +64,6 @@ msgstr "Торговый центр"
 
 msgid "Public Farm"
 msgstr "Общественная ферма"
+
+msgid "Prison Visitation"
+msgstr "Посещение тюрьмы"

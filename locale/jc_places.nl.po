@@ -64,3 +64,6 @@ msgstr "Winkelcentrum"
 
 msgid "Public Farm"
 msgstr "Openbare Boerderij"
+
+msgid "Prison Visitation"
+msgstr "Gevangenisbezoek"

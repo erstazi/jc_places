@@ -64,3 +64,6 @@ msgstr "Einkaufszentrum"
 
 msgid "Public Farm"
 msgstr "Öffentlicher Bauernhof"
+
+msgid "Prison Visitation"
+msgstr "Gefängnisbesuch"

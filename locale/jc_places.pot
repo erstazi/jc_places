@@ -63,3 +63,6 @@ msgstr ""
 
 msgid "Public Farm"
 msgstr ""
+
+msgid "Prison Visitation"
+msgstr ""

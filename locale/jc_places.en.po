@@ -64,3 +64,6 @@ msgstr "Shopping Mall"
 
 msgid "Public Farm"
 msgstr "Public Farm"
+
+msgid "Prison Visitation"
+msgstr "Prison Visitation"

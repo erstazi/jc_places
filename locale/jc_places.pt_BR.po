@@ -64,3 +64,6 @@ msgstr "Centro Comercial"
 
 msgid "Public Farm"
 msgstr "Fazenda Pública"
+
+msgid "Prison Visitation"
+msgstr "Visita à prisão"
