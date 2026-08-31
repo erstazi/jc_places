@@ -66,4 +66,4 @@ msgid "Public Farm"
 msgstr "Granja Pública"
 
 msgid "Prison Visitation"
-msgstr "Visita a la Prisión"
+msgstr "Visitas a la Cárcel"
