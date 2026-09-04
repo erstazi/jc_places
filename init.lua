@@ -136,7 +136,8 @@ function jc_places.show_places(name)
     .. "size[11,9]"
     .. default.gui_bg
     .. default.gui_bg_img
-    .. "label[0.5,0.4;" .. core.formspec_escape(S("Available Teleports")) .. "]"
+    -- .. "label[0.5,0.4;" .. core.formspec_escape(S("Available Teleports")) .. "]"
+    .. "label[0.5,0.4;" .. core.formspec_escape(S("Available Teleports")) .. "  " .. core.formspec_escape(core.colorize("#FFFF00", "/places")) .. "]"
     .. "box[0.4,1.0;9.9,6.6;#111111]"
     .. "scroll_container[0.6,1.2;9.5,6.2;jc_places_scroll;vertical;1]"
 
