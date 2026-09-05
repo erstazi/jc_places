@@ -28,7 +28,7 @@ jc_places = {
 -- Helper functions
 -- ========================
 
-local function get_pos(place)
+function jc_places.get_pos(place)
   -- Try mod_storage first
   local str = mod_storage:get_string("pos_" .. place.name)
 
@@ -85,7 +85,7 @@ local function jc_places_register_place(place)
       -- /place get
       -- ==========================================
       elseif params:match("^get$") then
-        local target_pos = get_pos(place)
+        local target_pos = jc_places.get_pos(place)
         if target_pos then
           local coordinates = string.format("(%d,%d,%d)", target_pos.x, target_pos.y, target_pos.z )
           return true, core.colorize("yellow", place.label .. ": " .. coordinates )
@@ -97,7 +97,7 @@ local function jc_places_register_place(place)
       -- /place
       -- ==========================================
       else
-        local target_pos = get_pos(place)
+        local target_pos = jc_places.get_pos(place)
         if target_pos and target_pos.x ~= 0 then
           local safe_pos = { x = target_pos.x, y = target_pos.y + 1, z = target_pos.z }
           player:set_pos(safe_pos)
@@ -190,7 +190,7 @@ core.register_on_player_receive_fields(function(player, formname, fields)
   end
 
   if selected_place then
-    local target_pos = get_pos(selected_place)
+    local target_pos = jc_places.get_pos(selected_place)
 
     if target_pos and target_pos.x ~= 0 then
       local safe_pos = {
