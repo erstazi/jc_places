@@ -65,5 +65,8 @@ msgstr "Winkelcentrum"
 msgid "Public Farm"
 msgstr "Openbare Boerderij"
 
+msgid "Church of Just-Craft"
+msgstr "Kerk van Just-Craft"
+
 msgid "Prison Visitation"
 msgstr "Gevangenisbezoek"

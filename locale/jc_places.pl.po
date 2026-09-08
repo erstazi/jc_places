@@ -65,5 +65,8 @@ msgstr "Centrum handlowe"
 msgid "Public Farm"
 msgstr "Publiczna Farma"
 
+msgid "Church of Just-Craft"
+msgstr "Kościół Just-Craft"
+
 msgid "Prison Visitation"
 msgstr "Odwiedziny w więzieniu"

@@ -20,6 +20,7 @@ jc_places = {
     { name = "city", setting = "city_pos", label = S("City"), web_label = "City Hall", },
     { name = "horses", setting = "horses_pos", label = S("Horse Track"), web_label = "Horse Track", },
     { name = "archery", setting = "archery_pos", label = S("Archery Range"), web_label = "Archery Range", },
+    { name = "church", setting = "church_pos", label = S("Church of Just-Craft"), web_label = "Church of Just-Craft", },
     { name = "prison", setting = "prison_visitor_pos", label = S("Prison Visitation"), web_label = "Prison", },
   },
 }

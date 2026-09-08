@@ -65,5 +65,8 @@ msgstr "Торговий центр"
 msgid "Public Farm"
 msgstr "Громадська ферма"
 
+msgid "Church of Just-Craft"
+msgstr "Церква Just-Craft"
+
 msgid "Prison Visitation"
 msgstr "Відвідування в'язниці"

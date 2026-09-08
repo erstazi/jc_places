@@ -65,5 +65,8 @@ msgstr "购物中心"
 msgid "Public Farm"
 msgstr "公共农场"
 
+msgid "Church of Just-Craft"
+msgstr "Just-Craft教堂"
+
 msgid "Prison Visitation"
 msgstr "监狱探视"

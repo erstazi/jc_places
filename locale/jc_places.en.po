@@ -65,5 +65,11 @@ msgstr "Shopping Mall"
 msgid "Public Farm"
 msgstr "Public Farm"
 
+msgid "Church of Just-Craft"
+msgstr "Church of Just-Craft"
+
+msgid "Church of Just-Craft"
+msgstr "Iglesia de Just-Craft"
+
 msgid "Prison Visitation"
 msgstr "Prison Visitation"

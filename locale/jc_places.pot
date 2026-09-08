@@ -64,5 +64,8 @@ msgstr ""
 msgid "Public Farm"
 msgstr ""
 
+msgid "Church of Just-Craft"
+msgstr ""
+
 msgid "Prison Visitation"
 msgstr ""
