@@ -12,7 +12,7 @@ msgid "Player not found"
 msgstr "Nie znaleziono gracza"
 
 msgid "Nice try! You can't escape!"
-msgstr "Niezła próba! Nie możesz uciec!"
+msgstr "Niezła próba! Nie uciekniesz!"
 
 msgid "@1 position updated!"
 msgstr "Pozycja @1 została zaktualizowana!"
@@ -30,7 +30,7 @@ msgid "List all available teleport locations"
 msgstr "Wyświetl wszystkie dostępne lokalizacje teleportacji"
 
 msgid "Available Teleports"
-msgstr "Dostępne teleportacje"
+msgstr "Dostępne lokacje"
 
 msgid "Teleport"
 msgstr "Teleportuj"
@@ -42,7 +42,7 @@ msgid "Spawn"
 msgstr "Spawn"
 
 msgid "Apartment"
-msgstr "Apartament"
+msgstr "Mieszkanie"
 
 msgid "City"
 msgstr "Miasto"
@@ -54,10 +54,10 @@ msgid "Horse Track"
 msgstr "Tor wyścigów konnych"
 
 msgid "Archery Range"
-msgstr "Tor łuczniczy"
+msgstr "Strzelnica łucznicza"
 
 msgid "Public Mine"
-msgstr "Publiczna Kopalnia"
+msgstr "Publiczna kopalnia"
 
 msgid "Shopping Mall"
 msgstr "Centrum handlowe"
