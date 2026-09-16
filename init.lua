@@ -3,9 +3,17 @@
 -- ============================================================================
 
 local mod_storage = core.get_mod_storage()
+local mod_name = core.get_current_modname()
 local S = core.get_translator(core.get_current_modname())
 local xban_available = core.get_modpath("xban2") ~= nil
 local prison_pos = core.settings:get_pos("prison_pos") or { x = -53, y = -7, z = 59 }
+
+-------------------------------------------------------------------------------
+-- Configuration
+-------------------------------------------------------------------------------
+-- Change this to wherever you want the places.json to be written.
+-------------------------------------------------------------------------------
+local PLACES_JSON = core.get_worldpath() .. "/places.json"
 
 jc_places = {
   pos_not_set = false,
@@ -102,6 +110,7 @@ local function jc_places_register_place(place)
         if target_pos and target_pos.x ~= 0 then
           local safe_pos = { x = target_pos.x, y = target_pos.y + 1, z = target_pos.z }
           player:set_pos(safe_pos)
+          core.log("action", string.format("[" .. mod_name .. "] %s teleported to %s at %s", player_name, place.web_label, core.pos_to_string(safe_pos, 0) ) )
           return true, S("Teleported to @1...", place.label)
         else
           return true, core.colorize("#FF7C7C", "-!- " .. S("Position for @1 is not set!", place.label) )
@@ -211,6 +220,7 @@ core.register_on_player_receive_fields(function(player, formname, fields)
       end
       player:set_pos(safe_pos)
       core.close_formspec(player_name, "jc_places:places")
+      core.log("action", string.format("[" .. mod_name .. "] %s teleported to %s at %s", player_name, selected_place.web_label, core.pos_to_string(safe_pos, 0) ) )
       core.chat_send_player(player_name, S("Teleported to @1...", selected_place.label) )
       return true
     else
@@ -221,3 +231,176 @@ core.register_on_player_receive_fields(function(player, formname, fields)
 
   return false
 end)
+
+-------------------------------------------------------------------------------
+-- JSON encoder and Helper Functions
+-------------------------------------------------------------------------------
+local function json_escape(str)
+  str = tostring(str)
+
+  str = str:gsub("\\", "\\\\")
+  str = str:gsub("\"", "\\\"")
+  str = str:gsub("\b", "\\b")
+  str = str:gsub("\f", "\\f")
+  str = str:gsub("\n", "\\n")
+  str = str:gsub("\r", "\\r")
+  str = str:gsub("\t", "\\t")
+
+  return str
+end
+
+local function json_encode(value)
+  local value_type = type(value)
+
+  -- ------------------------------------------------------------
+  -- String
+  -- ------------------------------------------------------------
+  if value_type == "string" then
+    return "\"" .. json_escape(value) .. "\""
+
+  -- ------------------------------------------------------------
+  -- Number
+  -- ------------------------------------------------------------
+  elseif value_type == "number" then
+    if value ~= value then
+      return "null"
+    end
+
+    if value == math.huge or value == -math.huge then
+      return "null"
+    end
+
+    return tostring(value)
+
+  -- ------------------------------------------------------------
+  -- Boolean
+  -- ------------------------------------------------------------
+  elseif value_type == "boolean" then
+    return value and "true" or "false"
+
+  -- ------------------------------------------------------------
+  -- Nil
+  -- ------------------------------------------------------------
+  elseif value_type == "nil" then
+    return "null"
+
+  -- ------------------------------------------------------------
+  -- Table
+  -- ------------------------------------------------------------
+  elseif value_type == "table" then
+    local parts = {}
+    local is_array = true
+    local count = 0
+
+    -- Determine whether this is an array.
+    for key, _ in pairs(value) do
+      count = count + 1
+
+      if type(key) ~= "number" or key < 1 or key % 1 ~= 0 then
+        is_array = false
+        break
+      end
+    end
+
+    -- ----------------------------------------------------------
+    -- JSON array
+    -- ----------------------------------------------------------
+    if is_array then
+      for i = 1, count do
+        parts[#parts + 1] = json_encode(value[i])
+      end
+
+      return "[" .. table.concat(parts, ",") .. "]"
+
+    -- ----------------------------------------------------------
+    -- JSON object
+    -- ----------------------------------------------------------
+    else
+      for key, item in pairs(value) do
+        parts[#parts + 1] =
+          "\"" .. json_escape(key) .. "\":" .. json_encode(item)
+      end
+
+      table.sort(parts)
+
+      return "{" .. table.concat(parts, ",") .. "}"
+    end
+  end
+
+  return "null"
+end
+
+-------------------------------------------------------------------------------
+-- Get /places information
+-------------------------------------------------------------------------------
+local function get_places_data()
+  local places = {}
+
+  -- Make sure jc_places is loaded.
+  if not jc_places or not jc_places.places then
+    return places
+  end
+
+  for _, place in ipairs(jc_places.places) do
+    local pos = jc_places.get_pos(place)
+
+    if pos then
+      places[#places + 1] = {
+        name = place.name,
+        label = place.web_label or place.name,
+        x = math.floor(pos.x),
+        y = math.floor(pos.y),
+        z = math.floor(pos.z),
+      }
+    end
+  end
+
+  local data = {
+    places = places,
+    updated = os.date("!%Y-%m-%dT%H:%M:%SZ"),
+  }
+
+  return data
+end
+
+-------------------------------------------------------------------------------
+-- Write places JSON file
+-------------------------------------------------------------------------------
+local function write_places_json()
+  local data = get_places_data()
+  local json = json_encode(data)
+
+  -- This prevents the website from ever seeing a partially-written JSON file.
+  local temp_file = PLACES_JSON .. ".tmp"
+
+  local file, err = io.open(temp_file, "w")
+
+  if not file then
+    core.log("error", "[" .. mod_name .. "] Could not open places JSON for writing: " .. tostring(err) )
+    return false
+  end
+
+  file:write(json)
+  file:write("\n")
+  file:close()
+
+  -- Replace the old JSON with the newly generated one.
+  local success, rename_err = os.rename(temp_file, PLACES_JSON)
+
+  if not success then
+    core.log("error", "[" .. mod_name .. "] Could not replace places JSON: " .. tostring(rename_err) )
+
+    os.remove(temp_file)
+
+    return false
+  end
+
+  core.log("action", "[" .. mod_name .. "] places JSON updated: " .. PLACES_JSON )
+
+  return true
+end
+
+-------------------------------------------------------------------------------
+-- Initial update
+-------------------------------------------------------------------------------
+write_places_json()
