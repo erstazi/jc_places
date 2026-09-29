@@ -44,6 +44,9 @@ msgstr "Spawn"
 msgid "Apartment"
 msgstr "Mieszkanie"
 
+msgid "Condos"
+msgstr "Mieszkania"
+
 msgid "City"
 msgstr "Miasto"
 

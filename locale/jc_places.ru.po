@@ -44,6 +44,9 @@ msgstr "Спавн"
 msgid "Apartment"
 msgstr "Квартира"
 
+msgid "Condos"
+msgstr "Квартиры"
+
 msgid "City"
 msgstr "Город"
 

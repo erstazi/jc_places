@@ -21,6 +21,7 @@ jc_places = {
   places = {
     { name = "spawn", setting = "static_spawnpoint", label = S("Spawn"), web_label = "Spawn", },
     { name = "apt", setting = "apartment_pos", label = S("Apartment"),  web_label = "Apartment", },
+    { name = "condos", setting = "spawncondo_pos", label = S("Condos"),  web_label = "Condos", },
     { name = "mine", setting = "mine_pos", label = S("Public Mine"), web_label = "Public Mine", },
     { name = "mall", setting = "mall_pos", label = S("Shopping Mall"), web_label = "Shopping Mall", },
     { name = "stadium", setting = "stadium_pos", label = S("Stadium"), web_label = "Stadium", },

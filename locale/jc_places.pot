@@ -43,6 +43,9 @@ msgstr ""
 msgid "Apartment"
 msgstr ""
 
+msgid "Condos"
+msgstr ""
+
 msgid "City"
 msgstr ""
 

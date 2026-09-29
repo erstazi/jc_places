@@ -44,6 +44,9 @@ msgstr "出生点"
 msgid "Apartment"
 msgstr "公寓"
 
+msgid "Condos"
+msgstr "公寓"
+
 msgid "City"
 msgstr "城市"
 
