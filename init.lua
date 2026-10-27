@@ -31,6 +31,7 @@ jc_places = {
     { name = "archery", setting = "archery_pos", label = S("Archery Range"), web_label = "Archery Range", },
     { name = "church", setting = "church_pos", label = S("Church of Just-Craft"), web_label = "Church of Just-Craft", },
     { name = "prison", setting = "prison_visitor_pos", label = S("Prison Visitation"), web_label = "Prison", },
+    { name = "balrog", setting = "balrog_pos", label = 'Balrog', web_label = "Balrog", },
   },
 }
 
