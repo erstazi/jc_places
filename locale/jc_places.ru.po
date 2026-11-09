@@ -73,3 +73,6 @@ msgstr "Церковь Just-Craft"
 
 msgid "Prison Visitation"
 msgstr "Посещение тюрьмы"
+
+msgid "PvP Arena"
+msgstr "Арена PvP"

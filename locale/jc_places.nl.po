@@ -73,3 +73,6 @@ msgstr "Kerk van Just-Craft"
 
 msgid "Prison Visitation"
 msgstr "Gevangenisbezoek"
+
+msgid "PvP Arena"
+msgstr "PvP Arena"

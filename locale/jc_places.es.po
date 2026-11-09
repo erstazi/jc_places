@@ -70,3 +70,6 @@ msgstr "Granja Pública"
 
 msgid "Prison Visitation"
 msgstr "Visitas a la Cárcel"
+
+msgid "PvP Arena"
+msgstr "Arena PvP"
