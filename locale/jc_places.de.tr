@@ -1,0 +1,25 @@
+# textdomain: jc_places
+Teleport to @1=Zu @1 teleportieren
+Player not found=Spieler nicht gefunden
+Nice try! You can't escape!=Netter Versuch! Du kannst nicht entkommen!
+@1 position updated!=Position von @1 aktualisiert!
+No permission to set position!=Keine Berechtigung, die Position festzulegen!
+Teleported to @1...=Zu @1 teleportiert...
+Position for @1 is not set!=Position für @1 ist nicht festgelegt!
+List all available teleport locations=Alle verfügbaren Teleportorte auflisten
+Available Teleports=Verfügbare Teleportorte
+Teleport=Teleportieren
+Close=Schließen
+Spawn=Spawn
+Apartment=Wohnung
+Condos=Eigentumswohnungen
+City=Stadt
+Stadium=Stadion
+Horse Track=Pferderennbahn
+Archery Range=Bogenschießplatz
+Public Mine=Öffentliche Mine
+Shopping Mall=Einkaufszentrum
+Public Farm=Öffentlicher Bauernhof
+Church of Just-Craft=Kirche von Just-Craft
+Prison Visitation=Gefängnisbesuch
+PvP Arena=PvP-Arena

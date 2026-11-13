@@ -1,0 +1,25 @@
+# textdomain: jc_places
+Teleport to @1=传送到 @1
+Player not found=未找到玩家
+Nice try! You can't escape!=想得美！你逃不掉！
+@1 position updated!=@1 的位置已更新！
+No permission to set position!=没有设置位置的权限！
+Teleported to @1...=已传送到 @1……
+Position for @1 is not set!=@1 的位置尚未设置！
+List all available teleport locations=列出所有可用的传送地点
+Available Teleports=可用传送地点
+Teleport=传送
+Close=关闭
+Spawn=出生点
+Apartment=公寓
+Condos=公寓
+City=城市
+Stadium=体育场
+Horse Track=赛马场
+Archery Range=射箭场
+Public Mine=公共矿场
+Shopping Mall=购物中心
+Public Farm=公共农场
+Church of Just-Craft=Just-Craft教堂
+Prison Visitation=监狱探视
+PvP Arena=玩家对战竞技场

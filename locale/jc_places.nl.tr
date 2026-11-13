@@ -1,0 +1,25 @@
+# textdomain: jc_places
+Teleport to @1=Teleporteer naar @1
+Player not found=Speler niet gevonden
+Nice try! You can't escape!=Goede poging! Je kunt niet ontsnappen!
+@1 position updated!=Positie van @1 bijgewerkt!
+No permission to set position!=Geen toestemming om de positie in te stellen!
+Teleported to @1...=Geteleporteerd naar @1...
+Position for @1 is not set!=Positie voor @1 is niet ingesteld!
+List all available teleport locations=Alle beschikbare teleportlocaties weergeven
+Available Teleports=Beschikbare teleportlocaties
+Teleport=Teleporteer
+Close=Sluiten
+Spawn=Spawn
+Apartment=Appartement
+Condos=Appartementen
+City=Stad
+Stadium=Stadion
+Horse Track=Paardenrenbaan
+Archery Range=Boogschietbaan
+Public Mine=Openbare Mijn
+Shopping Mall=Winkelcentrum
+Public Farm=Openbare Boerderij
+Church of Just-Craft=Kerk van Just-Craft
+Prison Visitation=Gevangenisbezoek
+PvP Arena=PvP Arena

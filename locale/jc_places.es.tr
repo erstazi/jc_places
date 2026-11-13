@@ -1,0 +1,24 @@
+# textdomain: jc_places
+Teleport to @1=Teletransportarse a @1
+Player not found=Jugador no encontrado
+Nice try! You can't escape!=¡Buen intento! ¡No puedes escapar!
+@1 position updated!=¡Posición de @1 actualizada!
+No permission to set position!=¡No tienes permiso para establecer la posición!
+Teleported to @1...=Teletransportado a @1...
+Position for @1 is not set!=¡La posición de @1 no está establecida!
+List all available teleport locations=Listar todas las ubicaciones de teletransporte disponibles
+Available Teleports=Teletransportes disponibles
+Teleport=Teletransportar
+Close=Cerrar
+Spawn=Spawn
+Apartment=Apartamento
+Condos=Condominios
+City=Ciudad
+Stadium=Estadio
+Horse Track=Hipódromo
+Archery Range=Campo de tiro con arco
+Public Mine=Mina Pública
+Shopping Mall=Centro Comercial
+Public Farm=Granja Pública
+Prison Visitation=Visitas a la Cárcel
+PvP Arena=Arena PvP

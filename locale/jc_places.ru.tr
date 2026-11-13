@@ -1,0 +1,25 @@
+# textdomain: jc_places
+Teleport to @1=Телепортироваться в @1
+Player not found=Игрок не найден
+Nice try! You can't escape!=Хорошая попытка! Тебе не сбежать!
+@1 position updated!=Позиция @1 обновлена!
+No permission to set position!=Нет прав для установки позиции!
+Teleported to @1...=Телепортировано в @1...
+Position for @1 is not set!=Позиция для @1 не установлена!
+List all available teleport locations=Показать все доступные места для телепортации
+Available Teleports=Доступные телепортации
+Teleport=Телепортироваться
+Close=Закрыть
+Spawn=Спавн
+Apartment=Квартира
+Condos=Квартиры
+City=Город
+Stadium=Стадион
+Horse Track=Ипподром
+Archery Range=Стрельбище из лука
+Public Mine=Общественная Шахта
+Shopping Mall=Торговый центр
+Public Farm=Общественная ферма
+Church of Just-Craft=Церковь Just-Craft
+Prison Visitation=Посещение тюрьмы
+PvP Arena=Арена PvP
