@@ -131,7 +131,6 @@ for _, place in ipairs(jc_places.places) do
   jc_places_register_place(place)
 end
 
-
 function jc_places.show_places(name)
   local player = core.get_player_by_name(name)
 
@@ -139,25 +138,40 @@ function jc_places.show_places(name)
     return false, S("Player not found")
   end
 
+  local player_info = core.get_player_information(name)
+  local supports_area_labels = player_info
+    and (player_info.formspec_version or 0) >= 9
+
   local row_height = 0.9
   local scroll_height = 6.2
-  -- local scroll_max = math.max(0, (#jc_places.places * row_height) - scroll_height)
   local scroll_max = math.max(0, math.ceil((#jc_places.places * row_height) - scroll_height))
 
   local formspec =
-      "formspec_version[4]"
+      "formspec_version[" .. (supports_area_labels and "9" or "4") .. "]"
     .. "size[11,9]"
     .. default.gui_bg
     .. default.gui_bg_img
-    -- .. "label[0.5,0.4;" .. core.formspec_escape(S("Available Teleports")) .. "]"
     .. "label[0.5,0.4;" .. core.formspec_escape(S("Available Teleports")) .. "  " .. core.formspec_escape(core.colorize("#FFFF00", "/places")) .. "]"
     .. "box[0.4,1.0;9.9,6.6;#111111]"
     .. "scroll_container[0.6,1.2;9.5,6.2;jc_places_scroll;vertical;1]"
 
   for i, place in ipairs(jc_places.places) do
     local y = 0.2 + ((i - 1) * row_height)
+
+    local label_text =
+      core.colorize("yellow", "/" .. place.name)
+      .. " - "
+      .. core.formspec_escape(place.label)
+
+    if supports_area_labels then
+      formspec = formspec
+        .. "label[0.2," .. y .. ";5.8,0.8;" .. label_text .. "]"
+    else
+      formspec = formspec
+        .. "label[0.2," .. y .. ";" .. label_text .. "]"
+    end
+
     formspec = formspec
-      .. "label[0.2," .. y .. ";5.8,0.8;" .. core.colorize("yellow", "/" .. place.name) .. " - " .. core.formspec_escape(place.label) .. "]"
       .. "button[6.7," .. (y - 0.08) .. ";3.0,0.6;teleport_" .. place.name .. ";" .. core.formspec_escape(S("Teleport")) .. "]"
   end
 
